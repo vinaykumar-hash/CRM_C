@@ -2,13 +2,14 @@ import React from "react"
 import { useNavigate } from "react-router-dom";
 import { useState , useEffect } from "react"
 const Register = () => {
-  const [email,newemail] = useState("")
+  const [email,newemail] = useState("vinay@gmail.com")
   const [password , newpassword] = useState("")
   const navigate = useNavigate();
 
   const alerting = (Event) => {
     // Event.preventDefault();
     localStorage.setItem("isLogined",true);
+    localStorage.setItem("User",email);
     navigate('/');
   }
   return (
